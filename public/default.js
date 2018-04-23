@@ -10,9 +10,6 @@
       var myGames = [];
       socket = io();
            
-      //////////////////////////////
-      // Socket.io handlers
-      ////////////////////////////// 
       
       socket.on('login', function(msg) {
             usersOnline = msg.users;
@@ -67,9 +64,7 @@
       
 
       
-      //////////////////////////////
-      // Menus
-      ////////////////////////////// 
+  
       $('#login').on('click', function() {
         username = $('#username').val();
         
