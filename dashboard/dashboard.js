@@ -8,9 +8,7 @@
       var boards = {};
 
 
-      //////////////////////////////
-      // Socket.io handlers
-      ////////////////////////////// 
+      
       
       socket.emit('dashboardlogin');
       socket.on('dashboardlogin', function(msg) {
@@ -34,9 +32,7 @@
       });
      
                  
-      //////////////////////////////
-      // Chess Games
-      ////////////////////////////// 
+      
       
     var createGamesList = function(serverGames) {
           Object.keys(serverGames).forEach(function(gameId) {
@@ -54,10 +50,10 @@
             position: serverGame.board ? serverGame.board : 'start',
           };
          
-          // create the game parent div 
+          
           $('#games').append($('<div id="game-board'+gameId+'" class="gameboard"></div>'));
           
-          // create the game     
+         
           var game = serverGame.board ? new Chess(serverGame.board) : new Chess();
           games[gameId] = game;
           
